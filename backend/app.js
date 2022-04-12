@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 
-const stuffRoutes = require('./routes/stuff');
+const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 
 
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 
 
 
-  app.use('/api/stuff', stuffRoutes);
+  app.use('/api/sauces', sauceRoutes);
   app.use('/api/auth', userRoutes);
 
   
@@ -40,5 +40,3 @@ module.exports = app;
 
 
 
-
-//   imageUrl: 'https://cdn.pixabay.com/photo/2019/06/11/18/56/camera-4267692_1280.jpg',
